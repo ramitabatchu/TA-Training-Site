@@ -27,17 +27,43 @@
         
     <div class="container">
         <nav>
-            <div class="nav-container">
-                <ul>
-                    <li><a href="https://learn.hr.gatech.edu/leadership-skills/">Leadership Skills</a></li>
-                    <li><a href="https://learn.hr.gatech.edu/build-your-skills/">Build Your Skills</a></li>
-                    <li><a href="https://learn.hr.gatech.edu/team-workshops/">Team Workshops</a></li>
-                    <li><a href="https://learn.hr.gatech.edu/course-catalog/">Course Catalog</a></li>
-                    <li><a href="https://learn.hr.gatech.edu/mandatory-training/">Mandatory Training</a></li>
-                    <li><a href="https://hr.gatech.edu/">Human Resources</a></li>
-                </ul>
-            </div>
-        </nav>
+  <div class="nav-container nav-row">
+    
+    <!-- LEFT: navigation links -->
+    <ul class="nav-links">
+      <li><a href="https://learn.hr.gatech.edu/leadership-skills/">Leadership Skills</a></li>
+      <li><a href="https://learn.hr.gatech.edu/build-your-skills/">Build Your Skills</a></li>
+      <li><a href="https://learn.hr.gatech.edu/team-workshops/">Team Workshops</a></li>
+      <li><a href="https://learn.hr.gatech.edu/course-catalog/">Course Catalog</a></li>
+      <li><a href="https://learn.hr.gatech.edu/mandatory-training/">Mandatory Training</a></li>
+      <li><a href="https://hr.gatech.edu/">Human Resources</a></li>
+    </ul>
+
+    <!-- RIGHT: nav action buttons -->
+    <div class="nav-actions">
+      <!-- Search button -->
+      <button class="nav-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+        </svg>
+        <span class="sr-only">Search</span>
+      </button>
+
+      <!-- Menu button -->
+      <button class="nav-icon-btn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
     </div>
 
     <!-- hero banner -->
@@ -48,7 +74,7 @@
         </div>
 
         <div class="hero-image">
-            <img src="assets/ta-image.jpg" alt="Training session">
+            <img src="assets/header-img.png">
         </div>
     </section>
 
@@ -84,17 +110,214 @@
         </ul>
 
         <!-- call to action button -->
-        <a href="https://security.gatech.edu/phishing-exercise/" class="btn-primary">Submit a Mandatory Training for Review</a>
-    </main>
+       <div class="cta-block">
+  <p class="cta-helper">
+    <a href="https://learn.hr.gatech.edu/mandatory-training/#checklist" class="cta-link">Click here</a>
+    to view a helpful checklist to find criteria to consider before requesting
+    <strong>Mandatory Training Review</strong>.
+  </p>
+
+  <a href="https://security.gatech.edu/phishing-exercise/"
+     class="cta-primary">
+    Submit a Mandatory Training for Review
+  </a>
+</div>
+
+<!-- types of training -->
+<section class="training-types" id="checklist">
+  <h2>Types of Training at Georgia Tech</h2>
+
+  <!-- REQUIRED wrapper -->
+  <div class="tab-card">
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="mandatory" data-index="0">
+        Mandatory
+      </button>
+      <button class="tab-btn" data-tab="recommended" data-index="1">
+        Strongly Recommended
+      </button>
+      <button class="tab-btn" data-tab="optional" data-index="2">
+        Optional (Voluntary)
+      </button>
+    </div>
+
+
+
+  <!-- Mandatory -->
+  <div class="tab-content active" id="mandatory">
+    <p>
+      Training required as a condition of an individual’s employment with the
+      USG or Institute. Failure to complete mandatory training may result in
+      disciplinary action consistent with BOR Policy.
+    </p>
+
+    <p>
+      USG Mandated Trainings:
+      <a href="#">Human Resources</a> |
+      <a href="#">Mandatory Trainings</a> |
+      <a href="#">University System of Georgia</a>
+    </p>
+
+    <ul>
+      <li>Right to Know Training</li>
+      <li>USG Cyber Awareness Training</li>
+      <li>USG Ethics Training &amp; Certification</li>
+    </ul>
+
+    <h4>Criteria for Mandatory Training:</h4>
+    <ol>
+      <li>Training must be submitted through the Georgia Tech Mandatory Approval Process</li>
+      <li>Approved by the CHRO and President</li>
+      <li>Consistent with BOR Policy</li>
+      <li>Required by an outside governing body (e.g., DOJ, DOD)</li>
+      <li>Documented in the Institute’s LMS</li>
+      <li>Records archived for 5 years</li>
+      <li>Necessary to fulfill job duties and mitigate institutional risk</li>
+    </ol>
+  </div>
+
+  <!-- Strongly Recommended -->
+  <div class="tab-content" id="recommended">
+    <p>
+      Training is not required but strongly recommended to improve and enhance
+      the employee’s performance and job knowledge.
+    </p>
+
+    <h4>Criteria for Strongly Recommended Trainings</h4>
+    <ol>
+      <li>
+        Ensure that the training is in alignment with the Institute Strategic
+        Goals and Values.
+      </li>
+      <li>
+        Clearly state in the communication to the employee that the training is
+        <strong>“Strongly Recommended”</strong> but not required or mandatory.
+      </li>
+      <li>
+        Employees may opt in or opt out of participating in the training.
+        <em>
+          However, failure to complete may negatively impact the employee’s
+          performance ratings.
+        </em>
+      </li>
+    </ol>
+
+    <p>
+      <strong>Examples:</strong> New Employee Experience; Training associated
+      with Performance Improvement Plans (PIP)
+    </p>
+  </div>
+
+  <!-- Optional -->
+  <div class="tab-content" id="optional">
+    <p>
+      Training is not required. Employees are not obligated to attend.
+    </p>
+
+    <h4>Criteria for Optional Trainings</h4>
+    <ol>
+      <li>
+        Offerings that enhance or support the employee’s job duties and
+        responsibilities.
+      </li>
+      <li>
+        Employees can choose whether to complete the training.
+      </li>
+    </ol>
+  </div>
+</section>
+<!-- mandatory training process image -->
+<section class="approval-process">
+  <h2>Mandatory Training Approval Process Overview</h2>
+
+  <div class="process-image">
+    <img
+      src="assets/approval-process.png"
+      alt="Mandatory Training Approval Process Flowchart">
+  </div>
+</section>
+
+<!-- Additional Resources + FAQs -->
+<section class="resources-faq">
+
+  <!-- Banner -->
+  <div class="resources-hero">
+    <div class="resources-hero-text">
+      <h2>Additional<br>Resources</h2>
+    </div>
+    <div class="resources-hero-image">
+      <img src="assets\additional-resources.png">
+    </div>
+  </div>
+
+  <!-- FAQ Content -->
+  <div class="faq-container">
+    <span class="section-divider"></span>
+    <h3 class="faq-title">FAQs</h3>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What is a mandatory training?
+          <span class="faq-icon">▾</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Which University System of Georgia trainings are mandated?
+          <span class="faq-icon">▾</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What are the criteria for mandatory trainings?
+          <span class="faq-icon">▾</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          If the training does not meet the mandatory training criteria, what other types of training can be offered at Georgia Tech?
+          <span class="faq-icon">▾</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="vertical-line">
-                <p>Georgia Institute of Technology</p>
-                <p>North Avenue<br>Atlanta, GA 30332<br>
-                <p>+1 404.894.2000</p>
-            </div>
+    <p>Georgia Institute of Technology</p>
+    <p>North Avenue<br>Atlanta, GA 30332</p>
+
+    <a href="tel:+14048942000" class="contact-link">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.6 10.8c1.6 3 3.9 5.3 6.9 6.9l2.3-2.3c.3-.3.7-.4 1.1-.3
+                     1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1
+                     C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h3.9c.6 0 1 .4 1 1
+                     0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.6 2.9z"/>
+        </svg>
+        +1 404.894.2000
+    </a>
+
+    <a href="https://map.gatech.edu/" class="contact-link">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13
+                     c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5
+                     S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/>
+        </svg>
+        Campus Map
+    </a>
+</div>
+
             <div class="vertical-line">
                 <h4>General</h4>
                 <ul>
@@ -107,8 +330,14 @@
                 <h4>Legal</h4>
                 <ul>
                     <li><a href="https://www.gatech.edu/privacy">Legal & Privacy Information</a></li>
-                    <li><a href="https://titleix.gatech.edu/">Title IX/Sexual Misconduct</a></li>
-                    <li><a href="https://www.gatech.edu/accessibility/">Accessibility</a></li>
+                    <li><a href="https://gbi.georgia.gov/human-trafficking-notice">Human Trafficking Notice</a></li>
+                    <li><a href="https://eoc.gatech.edu/">Title IX/Sexual Misconduct</a></li>
+                    <li><a href="https://osi.gatech.edu/hazing-conduct-history">Hazing Public Disclosures</a></li>
+                    <li><a href="https://www.gatech.edu/accessibility">Accessibility</a></li>
+                    <li><a href="https://www.gatech.edu/accountability">Accountability</a></li>
+                    <li><a href="https://www.gatech.edu/accreditation">Accreditation</a></li>
+                    <li><a href="https://www.policylibrary.gatech.edu/employment/equal-opportunity-nondiscrimination-and-anti-harassment-policy">Equal Opportunity, Nondiscrimination, and Anti-Harassment Policy</a></li>
+                    <li><a href="https://secure.ethicspoint.com/domain/media/en/gui/76612/index.html">Report Free Speech and Censorship Concerns</a></li>
                 </ul>
             </div>
             <div class="vertical-line">
@@ -116,7 +345,17 @@
                     <img src="assets/gt-logo-white.svg" width="200" alt="Georgia Tech Logo" />
                 </a>
                 <p id="trademark">	&copy; 2026 Georgia Institute of Technology</p>
-                <p id="login-link"> gt login</p>
+                <a href="#" class="gt-login-link">
+  <svg class="gt-login-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <!-- arrow entering door -->
+    <path d="M10 17l5-5-5-5" />
+    <path d="M15 12H3" />
+    <path d="M19 4h-6a2 2 0 0 0-2 2v3" />
+    <path d="M11 18v-3a2 2 0 0 1 2-2h6" />
+  </svg>
+  <span>GT LOGIN</span>
+</a>
+
             </div>
         </div>
     </footer>

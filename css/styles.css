@@ -7,7 +7,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #262626;
 }
 
 
@@ -32,37 +32,130 @@ nav ul li {
     margin-right: 30px;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    padding: 15px 0;
-    display: block;
-    font-size: 16px;
+nav ul li a,
+.nav-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #8b7c4f;
-    text-decoration: underline;
-    text-underline-offset: 8px;
+nav ul li a {
+    padding: 0 2px;
+    color: #262626;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
 }
+
+.nav-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #262626;
+    stroke-width: 2;
+    fill: none;
+    margin-top: 1px;
+}
+
+nav ul li a:hover,
+.nav-icon-btn:hover {
+    border-bottom-color: #B3A369;
+}
+
+.nav-icon-btn:hover svg {
+    stroke: #B3A369;
+}
+
+
+
+/* NAV ROW LAYOUT */
+.nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* NAV ACTION BUTTONS */
+.nav-actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* ICON BUTTON BASE */
+.nav-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.nav-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #262626;
+    stroke-width: 2;
+    fill: none;
+}
+
+.nav-icon-btn:hover {
+    border-bottom-color: #B3A369;
+}
+
+.nav-icon-btn:hover svg {
+    stroke: #B3A369;
+}
+
+/* SCREEN READER ONLY */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 
 
 /* Hero Banner Styles */
 .hero-banner {
   display: flex;
   width: 100%;
-  height: 280px;
-  background-color: #003057; /* GT-style navy */
+  height: 240px; /* ↓ was 280px */
+  background-color: #003057;
   color: #ffffff;
 }
 
 .hero-text {
   flex: 1;
-  padding: 60px;
+  padding: 40px 50px; /* ↓ was 60px */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 
 .hero-subtitle {
   font-family: 'Roboto', sans-serif;
@@ -98,7 +191,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .hero-banner {
     flex-direction: column;
-    height: auto;
+    height: 230px;
   }
 
   .hero-text {
@@ -118,10 +211,8 @@ nav ul li a:hover {
 
 /* Header Styles */
 header {
-    background-color: #a4925a;
-    padding: 10px 0;
+    background-color: #B3A369;
 }
-
 
 .gt-banner {
     margin: 0 auto;
@@ -135,10 +226,10 @@ header {
 
 /* Main Content Styles */
 
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+.main-content { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 24px 24px; 
 }
 
 h1 {
@@ -151,25 +242,266 @@ h1 {
 
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.75;
 }
+
 
 /* Call to Action Button */
-.btn-primary {
-    display: inline-block;
-    background-color: #B3A369;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 3px;
-    margin: 20px 0;
-    font-weight: bold;
+.cta-helper {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: #262626;
 }
 
-.btn-primary:hover {
-    background-color: #8b7c4f;
+.cta-link {
+    color: #1a73e8; /* link blue */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.cta-primary {
+    display: inline-block;
+    background-color: #003057; /* GT navy */
+    color: #ffffff;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px; /* pill shape */
+    text-decoration: underline;
+    transition: background-color 0.2s ease;
+}
+
+.cta-primary:hover {
+    background-color: #002341;
+}
+/* ===== Types of Training Card ===== */
+
+.training-types {
+  margin: 60px 0;
+}
+
+.training-types h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #003057;
+  margin-bottom: 18px;
+}
+
+/* Outer rounded container */
+.tab-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Tabs row */
+.tabs {
+  display: flex;
+  background: #f5f5f5;
+  border-bottom: 1px solid #d9d9d9;
+  padding-left: 6px; /* subtle inset like real site */
+}
+
+/* Individual tabs */
+.tab-btn {
+  background: #f5f5f5;
+  border: none;
+  border-right: 1px solid #d9d9d9;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8b7c4f;
+  cursor: pointer;
+  position: relative;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Remove divider on last tab */
+.tab-btn:last-child {
+  border-right: none;
+}
+
+/* Active tab (key part) */
+.tab-btn.active {
+  background: #ffffff;
+  color: #b3a369;
+  border-bottom: 1px solid #ffffff; /* visually connects to content */
+  z-index: 2;
+}
+
+/* Hover for inactive tabs */
+.tab-btn:not(.active):hover {
+  background: #eeeeee;
+}
+
+/* ===== Content area ===== */
+
+.tab-content {
+  display: none;
+  padding: 28px 32px 32px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #262626;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Text spacing */
+.tab-content p {
+  margin-bottom: 18px;
+}
+
+.tab-content ul,
+.tab-content ol {
+  margin-left: 22px;
+  margin-bottom: 18px;
+}
+
+.tab-content li {
+  margin-bottom: 10px;
+}
+
+/* Section headers inside box */
+.tab-content h4 {
+  margin-top: 26px;
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #262626;
+}
+
+/* Links inside content */
+.tab-content a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* =========================
+   APPROVAL PROCESS IMAGE
+   ========================= */
+
+.approval-process {
+  margin: 80px 0 60px;
+}
+
+.approval-process h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #003057;
+  margin-bottom: 32px;
+}
+
+.process-image {
+  width: 100%;
+  overflow-x: auto; /* allows horizontal scroll if needed */
+}
+
+.process-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* =========================
+   ADDITIONAL RESOURCES + FAQ
+   ========================= */
+
+.resources-faq {
+  background: #eef0f6;
+  padding-bottom: 80px;
+}
+
+/* Top banner */
+.resources-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  min-height: 260px;
+}
+
+.resources-hero-text {
+  background: #0b3558;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.resources-hero-text h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.resources-hero-image {
+  background: #ddd;
+}
+
+.resources-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FAQ container */
+.faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 0;
+}
+
+/* Divider above FAQs */
+.section-divider {
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: #b3a369;
+  margin-bottom: 24px;
+}
+
+/* FAQ title */
+.faq-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #003057;
+  margin-bottom: 30px;
+}
+
+/* FAQ list */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual FAQ item */
+.faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d8d8d8;
+  padding: 22px 24px;
+}
+
+/* Question row */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown icon (static) */
+.faq-icon {
+  font-size: 18px;
+  color: #b3a369;
+  margin-left: 16px;
 }
 
 h3 {
@@ -192,31 +524,86 @@ ul.criteria-list li {
 /* Footer Styles */
 footer {
     background-color: #B3A369;
-    color: rgb(20, 20, 20);
-    padding: 40px 20px;
-    margin-top: 30px;
-    border-top: 20px solid #bfb37c;
+    color: #1a1a1a;
+    padding: 32px 20px;
+    border-top: 18px solid #D6C89E;
+}
+
+/* Footer contact links with icons */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 6px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    fill: #1a1a1a;
+    flex-shrink: 0;
+    margin-top: 1px; /* aligns icon baseline with text */
+    opacity: 0.9;
+}
+/* GT LOGIN link with icon */
+.gt-login-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.gt-login-link:hover {
+    text-decoration: underline;
+}
+
+/* Login icon styling */
+.gt-login-icon {
+    width: 14px;
+    height: 14px;
+    stroke: #1a1a1a;
+    stroke-width: 2;
+    fill: none;
+    margin-top: 1px; /* baseline alignment */
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
 }
 
 footer h4 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
 }
+
 
 footer ul {
     list-style: none;
 }
 
 footer ul li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
+
 
 footer a:link,
 footer a:visited,
@@ -231,9 +618,10 @@ footer a:hover {
 }
 
 .vertical-line {
-    border-left: 2px solid white;
-    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.45);
+    padding-left: 24px;
 }
+
 
 .footer-logo {
     margin-top: 30px;
@@ -245,11 +633,13 @@ footer a:hover {
 }
 
 #login-link {
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 5px;
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
-    cursor: pointer;
     text-decoration: underline;
+    cursor: pointer;
 }
+
 
