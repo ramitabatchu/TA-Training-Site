@@ -10,16 +10,51 @@ body {
     color: #262626;
 }
 
-
-/* Navigation Styles */
-.photo-banner {
-    background-color: #00305f;
+/* Header Styles */
+header {
+    background-color: #B3A369;
 }
 
+.gt-banner {
+  max-width: 1110px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+
+.banner-logo {
+  display: flex;
+  align-items: center;
+}
+
+
+.banner-logo img {
+  display: block;
+}
+
+/* Title */
+.ld-title {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+  padding-top: 16px;
+}
+
+.ld-title p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+/* Navigation Styles */
 .nav-container {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-top: 0%;
 }
 
 nav ul {
@@ -28,59 +63,65 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav ul li {
-    margin-right: 30px;
-}
 
 nav ul li a,
 .nav-icon-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
     padding: 0;
     border-bottom: 2px solid transparent;
-    transition: border-bottom-color 0.3s ease;
+    transition: border-bottom-color 0.1s ease;
 }
 
 nav ul li a {
     padding: 0 2px;
     color: #262626;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     text-decoration: none;
+    transition: text-shadow 0.3s ease;
 }
 
 .nav-icon-btn {
-    background: none;
+    background-color: #8b7c4f;
     border: none;
     cursor: pointer;
+    background-color: #B3A369;
 }
 .nav-icon-btn svg {
     width: 20px;
     height: 20px;
-    stroke: #262626;
+    stroke: #ffffff;
     stroke-width: 2;
     fill: none;
     margin-top: 1px;
+    
 }
 
 nav ul li a:hover,
 .nav-icon-btn:hover {
-    border-bottom-color: #B3A369;
+    text-decoration: underline;
+    text-decoration-color: #B3A369;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+    transition-delay: 0.1s;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
 .nav-icon-btn:hover svg {
-    stroke: #B3A369;
+  background-color: none;
+    stroke: white;
 }
 
 
-
-/* NAV ROW LAYOUT */
 .nav-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+
+.nav-actions {
+    margin-left: auto;
 }
 
 .nav-links {
@@ -89,18 +130,17 @@ nav ul li a:hover,
     gap: 30px;
 }
 
-/* NAV ACTION BUTTONS */
+
 .nav-actions {
     display: flex;
     gap: 20px;
 }
 
-/* ICON BUTTON BASE */
+
 .nav-icon-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +164,7 @@ nav ul li a:hover,
     stroke: #B3A369;
 }
 
-/* SCREEN READER ONLY */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -138,19 +178,21 @@ nav ul li a:hover,
 }
 
 
-
 /* Hero Banner Styles */
 .hero-banner {
+  margin-top: 40px;
   display: flex;
   width: 100%;
-  height: 240px; /* ↓ was 280px */
+  height: 270px;
   background-color: #003057;
   color: #ffffff;
 }
 
+
+
 .hero-text {
   flex: 1;
-  padding: 40px 50px; /* ↓ was 60px */
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,23 +200,18 @@ nav ul li a:hover,
 
 
 .hero-subtitle {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Courier New", monospace;
   font-size: 30px;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   opacity: 0.9;
-  font-weight: 100;
 }
 
 .hero-title {
-    font-family: 'Roboto Slab', serif;
-    font-size: 70px;
+    font-family: Georgia, serif;
+    font-size: 60px;
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.05em;
+    line-height: 1.1;
 }
-
-
 
 .hero-image {
   flex: 1;
@@ -209,25 +246,9 @@ nav ul li a:hover,
 }
 
 
-/* Header Styles */
-header {
-    background-color: #B3A369;
-}
-
-.gt-banner {
-    margin: 0 auto;
-    max-width: 1150px;
-}
-
-.banner-logo img {
-    padding-top: 5px;
-    padding-left: 5px;
-}
-
 /* Main Content Styles */
-
 .main-content { 
-    max-width: 1400px; 
+    max-width: 1120px; 
     margin: 0 auto; 
     padding: 0 24px 24px; 
 }
@@ -256,19 +277,19 @@ p {
 }
 
 .cta-link {
-    color: #1a73e8; /* link blue */
+    color: #1a73e8;
     text-decoration: underline;
     font-weight: 500;
 }
 
 .cta-primary {
     display: inline-block;
-    background-color: #003057; /* GT navy */
+    background-color: #003057;
     color: #ffffff;
     padding: 14px 32px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 999px; /* pill shape */
+    border-radius: 999px;
     text-decoration: underline;
     transition: background-color 0.2s ease;
 }
@@ -276,8 +297,9 @@ p {
 .cta-primary:hover {
     background-color: #002341;
 }
-/* ===== Types of Training Card ===== */
 
+
+/* Types of Training Card Info Tabs */
 .training-types {
   margin: 60px 0;
 }
@@ -289,7 +311,6 @@ p {
   margin-bottom: 18px;
 }
 
-/* Outer rounded container */
 .tab-card {
   border: 1px solid #d9d9d9;
   border-radius: 16px;
@@ -297,15 +318,15 @@ p {
   overflow: hidden;
 }
 
-/* Tabs row */
+
 .tabs {
   display: flex;
   background: #f5f5f5;
   border-bottom: 1px solid #d9d9d9;
-  padding-left: 6px; /* subtle inset like real site */
+  padding-left: 6px;
 }
 
-/* Individual tabs */
+
 .tab-btn {
   background: #f5f5f5;
   border: none;
@@ -320,25 +341,22 @@ p {
   border-top-right-radius: 12px;
 }
 
-/* Remove divider on last tab */
 .tab-btn:last-child {
   border-right: none;
 }
 
-/* Active tab (key part) */
 .tab-btn.active {
   background: #ffffff;
   color: #b3a369;
-  border-bottom: 1px solid #ffffff; /* visually connects to content */
+  border-bottom: 1px solid #ffffff;
   z-index: 2;
 }
 
-/* Hover for inactive tabs */
 .tab-btn:not(.active):hover {
   background: #eeeeee;
 }
 
-/* ===== Content area ===== */
+/* Content area */
 
 .tab-content {
   display: none;
@@ -352,7 +370,6 @@ p {
   display: block;
 }
 
-/* Text spacing */
 .tab-content p {
   margin-bottom: 18px;
 }
@@ -367,7 +384,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* Section headers inside box */
 .tab-content h4 {
   margin-top: 26px;
   margin-bottom: 12px;
@@ -376,16 +392,12 @@ p {
   color: #262626;
 }
 
-/* Links inside content */
 .tab-content a {
   color: #1a73e8;
   text-decoration: underline;
 }
 
-/* =========================
-   APPROVAL PROCESS IMAGE
-   ========================= */
-
+/* Approval Image Process */
 .approval-process {
   margin: 80px 0 60px;
 }
@@ -399,7 +411,7 @@ p {
 
 .process-image {
   width: 100%;
-  overflow-x: auto; /* allows horizontal scroll if needed */
+  overflow-x: auto;
 }
 
 .process-image img {
@@ -407,16 +419,13 @@ p {
   height: auto;
   display: block;
 }
-/* =========================
-   ADDITIONAL RESOURCES + FAQ
-   ========================= */
 
+/* Additonal Resources banner*/
 .resources-faq {
   background: #eef0f6;
   padding-bottom: 80px;
 }
 
-/* Top banner */
 .resources-hero {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -428,7 +437,7 @@ p {
   color: #ffffff;
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 60px 100px;
 }
 
 .resources-hero-text h2 {
@@ -448,23 +457,21 @@ p {
   object-fit: cover;
 }
 
-/* FAQ container */
+/* FAQs */
 .faq-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 20px 0;
 }
 
-/* Divider above FAQs */
 .section-divider {
   display: block;
-  width: 120px;
+  width: 350px;
   height: 2px;
-  background: #b3a369;
+  background: #988956;
   margin-bottom: 24px;
 }
 
-/* FAQ title */
 .faq-title {
   font-size: 32px;
   font-weight: 700;
@@ -472,14 +479,12 @@ p {
   margin-bottom: 30px;
 }
 
-/* FAQ list */
 .faq-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Individual FAQ item */
 .faq-item {
   background: #ffffff;
   border-radius: 12px;
@@ -487,7 +492,6 @@ p {
   padding: 22px 24px;
 }
 
-/* Question row */
 .faq-question {
   display: flex;
   justify-content: space-between;
@@ -497,7 +501,6 @@ p {
   color: #000000;
 }
 
-/* Dropdown icon (static) */
 .faq-icon {
   font-size: 18px;
   color: #b3a369;
@@ -511,7 +514,6 @@ h3 {
     margin-bottom: 15px;
 }
 
-
 ul.criteria-list {
     margin-left: 40px;
     margin-bottom: 20px;
@@ -521,20 +523,20 @@ ul.criteria-list li {
     margin-bottom: 10px;
 }
 
+
 /* Footer Styles */
 footer {
     background-color: #B3A369;
     color: #1a1a1a;
     padding: 32px 20px;
     border-top: 18px solid #D6C89E;
+    font-size: 13px;
 }
 
-/* Footer contact links with icons */
 .contact-link {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
     line-height: 1.6;
     margin-top: 6px;
     color: #1a1a1a;
@@ -549,16 +551,15 @@ footer {
     height: 16px;
     fill: #1a1a1a;
     flex-shrink: 0;
-    margin-top: 1px; /* aligns icon baseline with text */
+    margin-top: 1px;
     opacity: 0.9;
 }
-/* GT LOGIN link with icon */
+
 .gt-login-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     margin-top: 12px;
-    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     color: #1a1a1a;
@@ -570,14 +571,13 @@ footer {
     text-decoration: underline;
 }
 
-/* Login icon styling */
 .gt-login-icon {
     width: 14px;
     height: 14px;
     stroke: #1a1a1a;
     stroke-width: 2;
     fill: none;
-    margin-top: 1px; /* baseline alignment */
+    margin-top: 1px;
 }
 
 .footer-container {
@@ -591,10 +591,13 @@ footer {
 
 footer h4 {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 
+footer p {
+  font-size: 13px;
+}
 
 footer ul {
     list-style: none;
@@ -603,7 +606,6 @@ footer ul {
 footer ul li {
     margin-bottom: 6px;
 }
-
 
 footer a:link,
 footer a:visited,
@@ -618,10 +620,9 @@ footer a:hover {
 }
 
 .vertical-line {
-    border-left: 1px solid rgba(255, 255, 255, 0.45);
+    border-left: 2px solid rgba(255, 255, 255, 0.45);
     padding-left: 24px;
 }
-
 
 .footer-logo {
     margin-top: 30px;
@@ -635,11 +636,8 @@ footer a:hover {
 #login-link {
     display: inline-block;
     margin-top: 12px;
-    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: underline;
     cursor: pointer;
 }
-
-
